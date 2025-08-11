@@ -1,0 +1,31 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.coca_cola.android.ent.d2c_latam_QA",
+      "sha256_cert_fingerprints":
+        ["71:2B:3B:12:39:AA:F2:D1:D9:C5:DD:C0:B3:CF:47:70:83:19:AF:0F:34:56:A1:F9:F2:81:7C:B8:A5:41:21:C8",
+         "45:34:FA:D8:1B:61:C9:C4:E8:1B:38:8F:79:6B:A0:D4:53:04:61:72:94:8A:FF:B7:CD:40:B7:E4:4D:19:FE:6C"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.coca_cola.android.ent.d2c_latam_DEV",
+      "sha256_cert_fingerprints":
+        ["71:2B:3B:12:39:AA:F2:D1:D9:C5:DD:C0:B3:CF:47:70:83:19:AF:0F:34:56:A1:F9:F2:81:7C:B8:A5:41:21:C8",
+         "45:34:FA:D8:1B:61:C9:C4:E8:1B:38:8F:79:6B:A0:D4:53:04:61:72:94:8A:FF:B7:CD:40:B7:E4:4D:19:FE:6C"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.coca_cola.android.d2c_latam",
+      "sha256_cert_fingerprints":
+        ["01:6E:35:FB:07:51:C5:B8:6A:0F:8D:48:A3:29:51:09:E2:87:94:1C:02:FE:34:29:12:D5:82:E0:AB:88:3A:0D"]
+    }
+  }
+]

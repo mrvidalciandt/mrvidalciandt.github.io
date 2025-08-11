@@ -1,0 +1,31 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+          {
+              "appID": "Z9VSKJ792A.com.coca-cola.d2c-latam",
+              "paths": [
+                  "*"
+              ]
+          },
+          {
+              "appID": "25WQEF3G68.com.coca-cola.ent.d2c-latam.UAT",
+              "paths": [
+                  "*"
+              ]
+          },
+          {
+              "appID": "25WQEF3G68.com.coca-cola.ent.d2c-latam.QA",
+              "paths": [
+                  "*"
+              ]
+          },
+          {
+              "appID": "25WQEF3G68.com.coca-cola.ent.d2c-latam.DEV",
+              "paths": [
+                  "*"
+              ]
+          }
+      ]
+  }
+}

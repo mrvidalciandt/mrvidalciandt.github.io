@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Campaign</title>
+    <link rel="canonical" href="https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam&referrer=id%3DTEST123">
+</head>
+<body>
+    <h1>Simulated Campaign Link</h1>
+    <a href="https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam&referrer=id%3DTEST123">
+        Click here to install the app from campaign
+    </a>
+</body>
+</html>

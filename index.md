@@ -14,30 +14,29 @@
             if (isMobile) {
                 // Handle deep linking for Instagram and Facebook
                 if (isUserComingFromInstagramReferral || isUserComingFromFacebookReferral) {
-                    const url = window.location.href.replace("https://mrvidalciandt.github.io", "ethmobileapp://");
+                    // Attempt to open the app via deep link
+                    const url = "ethmobileapp://";
                     window.location = url;
 
-                     // Detect iOS
-                    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                        window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
-                    } 
-                    // Detect Android
-                    else if (/android/i.test(userAgent)) {
-                        window.location.href = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam";
-                    } else {
-                        // Fallback for unrecognized devices
-                        window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
-                    }
+                    // Fallback to the App Store after a slight delay
+                    setTimeout(function () {
+                        // Check if user is on iOS or Android for fallback
+                        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                            window.location = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
+                        } else if (/android/i.test(userAgent)) {
+                            window.location = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam";
+                        } else {
+                            // Fallback for unrecognized devices
+                            window.location = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
+                        }
+                    }, 1500); // Increased delay for better handling
                 } else {
-                    // Detect iOS
+                    // Redirect based on device type
                     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                         window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
-                    } 
-                    // Detect Android
-                    else if (/android/i.test(userAgent)) {
+                    } else if (/android/i.test(userAgent)) {
                         window.location.href = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam";
                     } else {
-                        // Fallback for unrecognized devices
                         window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
                     }
                 }

@@ -17,10 +17,17 @@
                     const url = window.location.href.replace("https://mrvidalciandt.github.io", "ethmobileapp://");
                     window.location = url;
 
-                    setTimeout(function () {
-                        // Fallback URL if the app is not installed
-                        window.location = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795"; // Fallback to App Store for iOS
-                    }, 1000);
+                     // Detect iOS
+                    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                        window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
+                    } 
+                    // Detect Android
+                    else if (/android/i.test(userAgent)) {
+                        window.location.href = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam";
+                    } else {
+                        // Fallback for unrecognized devices
+                        window.location.href = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795";
+                    }
                 } else {
                     // Detect iOS
                     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {

@@ -15,7 +15,7 @@
                 // Deep link for Instagram and Facebook
                 if (isUserComingFromInstagram || isUserComingFromFacebook) {
                     // Attempt to open the app via deep link
-                    window.location = "ethmobileapp://"; // Change to your app's deep link
+                    window.location.href = "ethmobileapp://"; // Change to your app's deep link
                     // Fallback to App Store or Play Store after a delay
                     setTimeout(function() {
                         // Check if user is on iOS or Android

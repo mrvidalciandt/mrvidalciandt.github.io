@@ -14,8 +14,8 @@
             if (isMobile) {
                 // Deep link for Instagram and Facebook
                 if (isUserComingFromInstagram || isUserComingFromFacebook) {
-                    // Attempt to open the app via deep link
-                    window.location.href = "ethmobileapp://"; // Change to your app's deep link
+                    const link = document.getElementById("deepLink");
+                    link.click(); // Trigger the click event to follow the link
                     // Fallback to App Store or Play Store after a delay
                     setTimeout(function() {
                         // Check if user is on iOS or Android
@@ -45,6 +45,7 @@
 </head>
 <body>
     <h1>Redirecting...</h1>
+    <a id="deepLink" href="ethmobileapp://" style="display:none;">Open App</a>
     <p>If you are not redirected automatically, follow this <a href="https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795">link to the Apple Store</a>.</p>
     <p>or follow this <a href="https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam">link to the Google Play Store</a>.</p>
 </body>

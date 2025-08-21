@@ -26,12 +26,17 @@
                         }
                     }, 2000); // 2-second delay
                 } else {
-                    // Direct to App Store or Play Store based on device type
-                    if (/iPad|iPhone|iPod/.test(userAgent)) {
-                        window.location = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795"; // iOS link
-                    } else if (/android/i.test(userAgent)) {
-                        window.location = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam"; // Android link
-                    }
+                const link = document.getElementById("deepLink");
+                    link.click(); // Trigger the click event to follow the link
+                    // Fallback to App Store or Play Store after a delay
+                    setTimeout(function() {
+                        // Check if user is on iOS or Android
+                        if (/iPad|iPhone|iPod/.test(userAgent)) {
+                            window.location = "https://apps.apple.com/mx/app/en-tu-hogar-by-coca-cola/id6444010795"; // Fallback for iOS
+                        } else if (/android/i.test(userAgent)) {
+                            window.location = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam"; // Fallback for Android
+                        }
+                    }, 2000); // 2-second delay
                 }
             } else {
                 // Optionally handle desktop users, for example:

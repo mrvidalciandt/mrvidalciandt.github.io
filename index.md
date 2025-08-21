@@ -24,7 +24,7 @@
                         } else if (/android/i.test(userAgent)) {
                             window.location = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam"; // Fallback for Android
                         }
-                    }, 2000); // 2-second delay
+                    }, 5000); // 2-second delay
                 } else {
                     const link = document.getElementById("deepLink");
                     link.click(); // Trigger the click event to follow the link
@@ -36,7 +36,7 @@
                         } else if (/android/i.test(userAgent)) {
                             window.location = "https://play.google.com/store/apps/details?id=com.coca_cola.android.d2c_latam"; // Fallback for Android
                         }
-                    }, 2000); // 2-second delay
+                    }, 5000); // 2-second delay
                 }
             } else {
                 // Optionally handle desktop users, for example:

@@ -26,7 +26,7 @@
                         }
                     }, 2000); // 2-second delay
                 } else {
-                const link = document.getElementById("deepLink");
+                    const link = document.getElementById("deepLink");
                     link.click(); // Trigger the click event to follow the link
                     // Fallback to App Store or Play Store after a delay
                     setTimeout(function() {
